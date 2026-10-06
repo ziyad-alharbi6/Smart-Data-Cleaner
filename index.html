@@ -2,52 +2,68 @@
 <html>
  <head>
 <title>Smart Data Cleaner</title>
- </head>
- <body>
-<h1>Smart Data Cleaner</h1>
-<p>Clean your data easily</p>
-<h2>Upload Your Dataset</h2>
+<link rel="stylesheet" type="text/css" href="style.css">
 
-<p>Select your CSV or Excel file:</p>
+</head>
+<header>
+    <h1>Smart Data Cleaner</h1>
+    <p>Clean your data easily.</p>
 
-<form>
-    <input type="file">
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="login.html">Login</a>
+    </nav>
+</header>
 
-    <br><br>
+<section class="upload-box">
 
-    <h3>Choose what you want to check:</h3>
+    <h2>Upload Your Dataset</h2>
 
-<input type="checkbox">
-<label>Missing Values</label>
+    <p>Select your CSV or Excel file:</p>
 
-<br>
+    <form>
 
-<input type="checkbox">
-<label>Duplicate Rows</label>
+        <input type="file">
 
-<br>
+        <br><br>
 
-<input type="checkbox">
-<label>Formatting Issues</label>
+        <h3>Choose what you want to check:</h3>
 
-<br>
+        <input type="checkbox">
+        <label>Missing Values</label>
 
-<input type="checkbox">
-<label>Extra Spaces</label>
+        <br>
 
-<br><br>
+        <input type="checkbox">
+        <label>Duplicate Rows</label>
 
-    <input type="submit" value="Analyze Data">
-</form>
-<hr>
+        <br>
 
-<h2>What is Smart Data Cleaner?</h2>
+        <input type="checkbox">
+        <label>Formatting Issues</label>
 
-<p>
-    Smart Data Cleaner is a web application that helps users
-    detect common data quality problems in CSV and Excel files.
-</p>
- </body>
+        <br>
+
+        <input type="checkbox">
+        <label>Extra Spaces</label>
+
+        <br><br>
+
+        <input type="submit" value="Analyze Data">
+
+    </form>
+
+</section>
+
+
+<section class="about">
+    <h2>What is Smart Data Cleaner?</h2>
+
+    <p>
+        Smart Data Cleaner is a web application that helps users
+        detect common data quality problems in CSV and Excel files.
+    </p>
+</section> </body>
 </html>   
 <footer>
     <p>© 2026 Smart Data Cleaner</p>
