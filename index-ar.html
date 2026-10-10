@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>منظف البيانات الذكي</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Smart Data Cleaner</h1>
+        <p>نظّف بياناتك بسهولة</p>
+
+        <nav>
+            <a href="index-ar.html">الرئيسية</a>
+            <a href="login-ar.html">تسجيل الدخول</a>
+            <a href="index.html">English</a>
+        </nav>
+    </header>
+
+    <section class="upload-box">
+        <h2>رفع ملف البيانات</h2>
+        <p>اختر ملف CSV أو Excel:</p>
+
+        <form action="results-ar.html">
+
+            <input type="file" accept=".csv,.xlsx,.xls" required>
+
+            <br><br>
+
+            <h3>اختر المشاكل التي تريد فحصها:</h3>
+
+            <input type="checkbox" id="missing">
+            <label for="missing">القيم المفقودة</label>
+            <br>
+
+            <input type="checkbox" id="duplicates">
+            <label for="duplicates">الصفوف المكررة</label>
+            <br>
+
+            <input type="checkbox" id="formatting">
+            <label for="formatting">مشاكل التنسيق</label>
+            <br>
+
+            <input type="checkbox" id="spaces">
+            <label for="spaces">المسافات الزائدة</label>
+
+            <br><br>
+
+            <input type="submit" value="تحليل البيانات">
+
+        </form>
+    </section>
+
+    <section class="about">
+        <h2>ما هو منظف البيانات الذكي؟</h2>
+
+        <p>
+            منظف البيانات الذكي هو موقع يساعد المستخدمين
+            على اكتشاف مشاكل جودة البيانات الشائعة
+            في ملفات CSV وExcel.
+        </p>
+    </section>
+
+    <footer>
+        <p>© 2026 Smart Data Cleaner</p>
+    </footer>
+
+</body>
+</html>

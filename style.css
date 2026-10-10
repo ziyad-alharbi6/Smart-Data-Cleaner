@@ -10,7 +10,8 @@ header {
     text-align: center;
     padding: 20px;
 }
-.box {
+.box,
+.upload-box {
     background-color: white;
     width: 500px;
     margin: 40px auto;
@@ -65,3 +66,95 @@ nav a:hover {
     border-radius: 5px;
     box-sizing: border-box;
 }
+
+
+
+html[lang="ar"] {
+    direction: rtl;
+}
+
+html[lang="ar"] .upload-box,
+html[lang="ar"] .login-box {
+    text-align: right;
+    box-sizing: border-box;
+    max-width: 90%;
+}
+
+html[lang="ar"] .about {
+    max-width: 90%;
+    line-height: 1.8;
+}
+
+html[lang="ar"] .upload-box h2,
+html[lang="ar"] .login-box h2 {
+    text-align: center;
+}
+
+html[lang="ar"] input[type="file"] {
+    max-width: 100%;
+}
+
+html[lang="ar"] input[type="email"] {
+    direction: ltr;
+    text-align: left;
+}
+
+html[lang="ar"] input[type="password"] {
+    direction: ltr;
+    text-align: left;
+}
+
+html[lang="ar"] footer {
+    text-align: center;
+}
+
+
+html[lang="ar"] .results-box {
+    background-color: white;
+    width: 600px;
+    max-width: 90%;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px gray;
+    box-sizing: border-box;
+    text-align: right;
+    font-family: Arial, sans-serif;
+}
+
+html[lang="ar"] .results-box h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+html[lang="ar"] .results-box h3 {
+    margin-top: 25px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid lightgray;
+}
+
+html[lang="ar"] .results-box p {
+    line-height: 1.8;
+}
+
+html[lang="ar"] .results-box ul {
+    padding-right: 25px;
+    padding-left: 0;
+    line-height: 2;
+}
+
+html[lang="ar"] .results-box input[type="button"] {
+    background-color: #2c3e50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+
+
+
+
+
