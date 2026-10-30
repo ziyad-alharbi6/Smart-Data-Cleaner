@@ -1,8 +1,13 @@
+
+/* General Style */
+
 body {
     background-color: #f4f7f9;
     font-family: Arial, sans-serif;
     margin: 0;
 }
+
+/* Header */
 
 header {
     background-color: #2c3e50;
@@ -10,29 +15,9 @@ header {
     text-align: center;
     padding: 20px;
 }
-.box,
-.upload-box {
-    background-color: white;
-    width: 500px;
-    margin: 40px auto;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px gray;
-}
 
-input[type="submit"] {
-    background-color: #2c3e50;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-.about {
-    width: 700px;
-    margin: 40px auto;
-    text-align: center;
-}
+/* Navigation */
+
 nav {
     margin-top: 20px;
 }
@@ -42,21 +27,42 @@ nav a {
     text-decoration: none;
     margin: 0 15px;
 }
+
 nav a:hover {
-    color: green;
+    color: #1abc9c;
 }
+
+/* Home and Upload Box */
+
+.box,
+.upload-box {
+    background-color: white;
+    width: 500px;
+    max-width: 90%;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px gray;
+    box-sizing: border-box;
+}
+
+/* Login Box */
+
 .login-box {
     background-color: white;
     width: 350px;
+    max-width: 90%;
     margin: 60px auto;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 0 10px gray;
+    box-sizing: border-box;
 }
 
 .login-box h2 {
     text-align: center;
 }
+
 .login-box input[type="email"],
 .login-box input[type="password"] {
     width: 100%;
@@ -67,83 +73,11 @@ nav a:hover {
     box-sizing: border-box;
 }
 
+/* Buttons */
 
-
-html[lang="ar"] {
-    direction: rtl;
-}
-
-html[lang="ar"] .upload-box,
-html[lang="ar"] .login-box {
-    text-align: right;
-    box-sizing: border-box;
-    max-width: 90%;
-}
-
-html[lang="ar"] .about {
-    max-width: 90%;
-    line-height: 1.8;
-}
-
-html[lang="ar"] .upload-box h2,
-html[lang="ar"] .login-box h2 {
-    text-align: center;
-}
-
-html[lang="ar"] input[type="file"] {
-    max-width: 100%;
-}
-
-html[lang="ar"] input[type="email"] {
-    direction: ltr;
-    text-align: left;
-}
-
-html[lang="ar"] input[type="password"] {
-    direction: ltr;
-    text-align: left;
-}
-
-html[lang="ar"] footer {
-    text-align: center;
-}
-
-
-html[lang="ar"] .results-box {
-    background-color: white;
-    width: 600px;
-    max-width: 90%;
-    margin: 40px auto;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px gray;
-    box-sizing: border-box;
-    text-align: right;
-    font-family: Arial, sans-serif;
-}
-
-html[lang="ar"] .results-box h2 {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-html[lang="ar"] .results-box h3 {
-    margin-top: 25px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid lightgray;
-}
-
-html[lang="ar"] .results-box p {
-    line-height: 1.8;
-}
-
-html[lang="ar"] .results-box ul {
-    padding-right: 25px;
-    padding-left: 0;
-    line-height: 2;
-}
-
-html[lang="ar"] .results-box input[type="button"] {
+input[type="submit"],
+input[type="button"],
+button {
     background-color: #2c3e50;
     color: white;
     border: none;
@@ -153,8 +87,200 @@ html[lang="ar"] .results-box input[type="button"] {
     font-size: 14px;
 }
 
+input[type="submit"]:hover,
+input[type="button"]:hover,
+button:hover {
+    background-color: #1abc9c;
+}
+
+/* About Section */
+
+.about {
+    width: 700px;
+    max-width: 90%;
+    margin: 40px auto;
+    text-align: center;
+    box-sizing: border-box;
+    line-height: 1.8;
+}
+
+/* Project Image */
+
+.project-image {
+    text-align: center;
+    margin: 30px auto;
+}
+
+.project-image h2 {
+    font-size: 22px;
+    color: #2c3e50;
+}
+
+.project-image img {
+    display: block;
+    margin: 15px auto;
+    border-radius: 10px;
+    max-width: 90%;
+    height: auto;
+}
+
+/* Results Box */
+
+.results-box {
+    background-color: white;
+    width: 600px;
+    max-width: 90%;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px gray;
+    box-sizing: border-box;
+}
+
+.results-box h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.results-box h3 {
+    margin-top: 25px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid lightgray;
+}
+
+.results-box p {
+    line-height: 1.8;
+}
+
+/* Results Table */
+
+.results-box table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.results-box th,
+.results-box td {
+    border: 1px solid lightgray;
+    padding: 12px;
+    text-align: left;
+}
+
+.results-box th {
+    background-color: #2c3e50;
+    color: white;
+}
+
+.results-box tr:nth-child(even) {
+    background-color: #f4f7f9;
+}
+
+/* Footer */
+
+footer {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Arabic Pages */
+
+html[lang="ar"] {
+    direction: rtl;
+}
+
+html[lang="ar"] .upload-box,
+html[lang="ar"] .box,
+html[lang="ar"] .login-box,
+html[lang="ar"] .results-box {
+    text-align: right;
+}
+
+html[lang="ar"] .upload-box h2,
+html[lang="ar"] .login-box h2,
+html[lang="ar"] .results-box h2 {
+    text-align: center;
+}
+
+html[lang="ar"] input[type="file"] {
+    max-width: 100%;
+}
+
+html[lang="ar"] input[type="email"],
+html[lang="ar"] input[type="password"] {
+    direction: ltr;
+    text-align: left;
+}
+
+/* Arabic Results Table */
+
+html[lang="ar"] .results-box th,
+html[lang="ar"] .results-box td {
+    text-align: right;
+}
+
+html[lang="ar"] .results-box ul {
+    padding-right: 25px;
+    padding-left: 0;
+    line-height: 2;
+}
+
+/* Responsive Design */
+
+@media (max-width: 600px) {
+    .box,
+    .upload-box,
+    .login-box,
+    .results-box {
+        width: 90%;
+        padding: 20px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 5px 10px;
+    }
+}
 
 
+.image-container {
+    position: relative;
+    width: 300px;
+    max-width: 90%;
+    margin: 15px auto;
+}
 
+.image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.image-label {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #1abc9c;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    z-index: 2;
+}
+.about ul {
+    display: inline-block;
+    text-align: left;
+    line-height: 2;
+}
+
+html[lang="ar"] .about ul {
+    text-align: right;
+}
+
+.highlight {
+    color: #1abc9c;
+    font-weight: bold;
+}
 
 
