@@ -11,22 +11,46 @@
 <body>
 
     <header>
-        <h1>Smart Data Cleaner</h1>
+        <h1>منظف البيانات</h1>
         <p>نظّف بياناتك بسهولة</p>
 
         <nav>
+            <a href="signup-ar.html">إنشاء حساب</a>
+            <a href="#about">عن المشروع</a>
             <a href="login-ar.html">تسجيل الدخول</a>
             <a href="index.html">English</a>
         </nav>
     </header>
+    <section class="project-image">
+    
+
+
+<div class="image-container">
+    <span class="image-label">Excel</span>
+
+    <img src="cleaner.jpg"
+         alt="Excel Data Cleaning"
+         usemap="#cleaner-map"
+         width="300">
+
+    <map name="cleaner-map">
+        <area shape="rect"
+              coords="0,0,300,200"
+              href="about-ar.html"
+              alt="About Us">
+    </map>
+</div>
+
+
+</section>
 
     <section class="upload-box">
         <h2>رفع ملف البيانات</h2>
-        <p>اختر ملف CSV أو Excel:</p>
+        <p>اختر ملف Excel:</p>
 
         <form action="results-ar.html">
 
-            <input type="file" accept=".csv,.xlsx,.xls" required>
+            <input type="file" accept=".xlsx,.xls" required>
 
             <br><br>
 
@@ -54,13 +78,13 @@
         </form>
     </section>
 
-    <section class="about">
+    <section class="about" id="about">
         <h2>ما هو منظف البيانات الذكي؟</h2>
 
         <p>
             منظف البيانات الذكي هو موقع يساعد المستخدمين
             على اكتشاف مشاكل جودة البيانات الشائعة
-            في ملفات CSV وExcel.
+            في ملفات Excel.
         </p>
     </section>
 
