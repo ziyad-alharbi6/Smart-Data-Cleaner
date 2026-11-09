@@ -41,8 +41,21 @@ if (fileNameElement) {
         fileNameElement.textContent = "File name: " + savedFileName;
     }
 }    setText("summaryTitle", "Dataset Summary", "ملخص البيانات", isArabic);
-    setText("rowsLabel", "Total Rows: 1000", "عدد الصفوف: 1000", isArabic);
-    setText("columnsLabel", "Total Columns: 8", "عدد الأعمدة: 8", isArabic);
+    
+    var rowsLabel = document.getElementById("rowsLabel");
+    var columnsLabel = document.getElementById("columnsLabel");
+
+    if (rowsLabel && columnsLabel) {
+        var rows = sessionStorage.getItem("totalRows") || "0";
+        var columns = sessionStorage.getItem("totalColumns") || "0";
+
+        rowsLabel.textContent =
+            (isArabic ? "عدد الصفوف: " : "Total Rows: ") + rows;
+
+        columnsLabel.textContent =
+            (isArabic ? "عدد الأعمدة: " : "Total Columns: ") + columns;
+    }
+
     setText("issuesTitle", "Issues Detected", "المشاكل المكتشفة", isArabic);
     setText("issueType", "Issue Type", "نوع المشكلة", isArabic);
     setText("countTitle", "Count", "العدد", isArabic);
@@ -75,16 +88,39 @@ if (fileNameElement) {
     }
     
     var statusMessage = document.getElementById("statusMessage");
+    
+    // Translate cleaning message when language changes
+    var statusMessage = document.getElementById("statusMessage");
 
-    if (statusMessage && statusMessage.textContent !== "") {
+    if (statusMessage && statusMessage.dataset.cleaned === "yes") {
+        var missing = statusMessage.dataset.missing;
+        var duplicates = statusMessage.dataset.duplicates;
+        var formatting = statusMessage.dataset.formatting;
+        var spaces = statusMessage.dataset.spaces;
+
         if (isArabic) {
             statusMessage.textContent =
-                " لم يتم تعديل أي بيانات";
+                "تم تجهيز الملف | الصفوف ذات القيم المفقودة المحذوفة: " +
+                missing +
+                " | الصفوف المكررة المحذوفة: " +
+                duplicates +
+                " | مشاكل نوع البيانات المعالجة: " +
+                formatting +
+                " | الخلايا التي تم تنظيف مسافاتها: " +
+                spaces;
         } else {
             statusMessage.textContent =
-                " No data has been changed";
+                "File prepared | Missing rows removed: " +
+                missing +
+                " | Duplicates removed: " +
+                duplicates +
+                " | Type issues handled: " +
+                formatting +
+                " | Spaces cleaned: " +
+                spaces;
         }
     }
+
     
     localStorage.setItem("siteLanguage", document.documentElement.lang);
 }
