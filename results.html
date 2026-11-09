@@ -1,59 +1,99 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
+
 <head>
     <meta charset="UTF-8">
     <title>Smart Data Cleaner</title>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
+
 <body>
+
 <header>
-    <h1>Smart Data Cleaner</h1>
-    <p>Clean your data easily.</p>
+    <h1 id="mainTitle">Smart Data Cleaner</h1>
+    <p id="subtitle">Clean your data easily.</p>
+
     <nav>
-        <a href="index.html">Home</a>
-        <a href="results-ar.html">العربية</a>
+        <a href="index.html" id="homeLink">Home</a>
+        <a href="#" id="languageButton"
+           onclick="changeLanguage(); return false;">العربية</a>
     </nav>
-
 </header>
+
 <main>
-    
+
     <section class="results-box">
-        <h2>Analysis Results </h2>
-        <p>File name:test.xlsx</p>
-        <h3>Dataset summary</h3>
-        <br>
-        <p>Total Rows: 1000</p>
-        <p>Total Columns:8</p>
 
-        <h3>Issues Detected </h3>
-        
-<table border="1">
-    <tr>
-        <th>Issue Type</th>
-        <th>Count</th>
-    </tr>
-    <tr>
-        <td>Missing Values</td>
-        <td>25</td>
-    </tr>
-    <tr>
-        <td>Duplicate Rows</td>
-        <td>12</td>
-    </tr>
-    <tr>
-        <td>Formatting Issues</td>
-        <td>7</td>
-    </tr>
-    <tr>
-        <td>Extra Spaces</td>
-        <td>18</td>
-    </tr>
-</table>
+        <h2 id="resultsTitle">Analysis Results</h2>
+
+        <p id="fileName">File name: test.xlsx</p>
+
+        <h3 id="summaryTitle">Dataset Summary</h3>
+
+        <p id="rowsLabel">Total Rows: 1000</p>
+        <p id="columnsLabel">Total Columns: 8</p>
+
+        <h3 id="issuesTitle">Issues Detected</h3>
+
+        <button type="button"
+                id="detailsButton"
+                onclick="toggleDetails()">
+            Hide Details
+        </button>
+
+        <div id="detailsSection">
+
+            <table border="1">
+
+                <tr>
+                    <th id="issueType">Issue Type</th>
+                    <th id="countTitle">Count</th>
+                </tr>
+
+                <tr id="row-missing">
+                    <td id="missingLabel">Missing Values</td>
+                    <td>25</td>
+                </tr>
+
+                <tr id="row-duplicates">
+                    <td id="duplicateLabel">Duplicate Rows</td>
+                    <td>12</td>
+                </tr>
+
+                <tr id="row-formatting">
+                    <td id="formatLabel">Formatting Issues</td>
+                    <td>7</td>
+                </tr>
+
+                <tr id="row-spaces">
+                    <td id="spacesLabel">Extra Spaces</td>
+                    <td>18</td>
+                </tr>
+
+            </table>
+
+        </div>
 
         <br>
-        <input type="button" value="Clean Data">
+
+        <input type="button"
+               id="cleanButton"
+               value="Clean Data"
+               onclick="cleanData()">
+
+        <p id="statusMessage"></p>
 
     </section>
+
 </main>
+
+<footer>
+    <p>© 2026 Smart Data Cleaner</p>
+</footer>
+
+<script src="language.js"></script>
+<script src="data.js"></script>
+
 </body>
 </html>

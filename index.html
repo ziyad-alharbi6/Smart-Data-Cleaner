@@ -1,91 +1,86 @@
+
 <!DOCTYPE html>
-<html lang="en" dir="rtl">
- <head>
+<html lang="en" dir="ltr">
+
+<head>
     <meta charset="UTF-8">
-<title>Smart Data Cleaner</title>
-<link rel="stylesheet" type="text/css" href="style.css">
+    <title>Smart Data Cleaner</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <header>
-    <h1>Smart Data Cleaner</h1>
-    <p>Clean your data easily</p>
+    <h1 id="mainTitle">Smart Data Cleaner</h1>
+    <p id="subtitle">Clean your data easily</p>
 
-<nav>
-    <a href="#about">About Project</a>
-    <a href="login.html">Login</a>
-    <a href="index-ar.html">العربية</a>
-</nav>
+    <nav>
+        <a href="#about" id="aboutLink">About Project</a>
+        <a href="login.html" id="loginLink">Login</a>
+        <a href="#" id="languageButton"
+           onclick="changeLanguage(); return false;">العربية</a>
+    </nav>
 </header>
+
 <section class="project-image">
-    
-    
+    <div class="image-container">
+        <span class="image-label">Excel</span>
 
-    
+        <img src="cleaner.jpg"
+             alt="Excel Data Cleaning"
+             usemap="#cleaner-map"
+             width="300">
 
-<div class="image-container">
-    <span class="image-label">Excel</span>
-
-    <img src="cleaner.jpg"
-         alt="Excel Data Cleaning"
-         usemap="#cleaner-map"
-         width="300">
-
-    <map name="cleaner-map">
-        <area shape="rect"
-              coords="0,0,300,200"
-              href="about.html"
-              alt="About Us">
-    </map>
-</div>
-
+        <map name="cleaner-map">
+            <area shape="rect"
+                  coords="0,0,300,200"
+                  href="about.html"
+                  alt="About Us">
+        </map>
+    </div>
 </section>
 
 <section class="box">
+    <h2 id="uploadTitle">Upload Your Dataset</h2>
 
-    <h2>Upload Your Dataset</h2>
+    <p id="fileLabel">Select your Excel file:</p>
 
-    <p>Select your  Excel file:</p>
-
-    <form action="results.html">
-
-        <input type="file" accept=".xlsx,.xls" required>
+    <form id="uploadForm" action="results.html" novalidate>
+        <input type="file" id="excelFile" accept=".xlsx,.xls" required>
 
         <br><br>
 
-        <h3>Choose what you want to check:</h3>
+        <h3 id="checkTitle">Choose what you want to check:</h3>
 
-        <input type="checkbox">
-        <label>Missing Values</label>
-
-        <br>
-
-        <input type="checkbox">
-        <label>Duplicate Rows</label>
+        <input type="checkbox" value="missing">
+        <label id="missingLabel">Missing Values</label>
 
         <br>
 
-        <input type="checkbox">
-        <label>Formatting Issues</label>
+        <input type="checkbox" value="duplicates">
+        <label id="duplicateLabel">Duplicate Rows</label>
 
         <br>
 
-        <input type="checkbox">
-        <label>Extra Spaces</label>
+        <input type="checkbox" value="formatting">
+        <label id="formatLabel">Formatting Issues</label>
+
+        <br>
+
+        <input type="checkbox" value="spaces">
+        <label id="spacesLabel">Extra Spaces</label>
 
         <br><br>
 
-        <input type="submit" value="Analyze Data">
-
+        <input type="submit" id="analyzeButton" value="Analyze Data">
+        <p id="errorMessage"></p>
     </form>
-
 </section>
 
-
 <section class="about" id="about">
-    <h2>What is Smart Data Cleaner?</h2>
+    <h2 id="aboutTitle">What is Smart Data Cleaner?</h2>
 
-    <p>
+    <p id="aboutText">
         Smart Data Cleaner is a web application that helps users
         detect common data quality problems in Excel files.
     </p>
@@ -94,5 +89,9 @@
 <footer>
     <p>© 2026 Smart Data Cleaner</p>
 </footer>
+
+<script src="language.js"></script>
+<script src="data.js"></script>
+
 </body>
 </html>
