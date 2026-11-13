@@ -1,6 +1,5 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,42 +9,62 @@
 <body>
 
 <header>
-    <h1>Smart Data Cleaner</h1>
+    <div class="top-bar">
+        <select id="languageSelect" class="language-select" onchange="changeLanguageFromSelect()">
+            <option value="en">English</option>
+            <option value="ar">العربية</option>
+        </select>
+
+        <a href="login.html" id="loginLink">Login</a>
+    </div>
+
+    <h1 id="mainTitle">Smart Data Cleaner</h1>
+    <p id="subtitle">Clean your data easily.</p>
+
     <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About Us</a>
-        <a href="signup-ar.html">العربية</a>
+        <a href="index.html" id="homeLink">Home</a>
+        <a href="about.html" id="aboutPageLink">About Us</a>
     </nav>
 </header>
 
 <main>
     <section class="login-box">
-        <h2>Create Account</h2>
+        <h2 id="signupTitle">Create Account</h2>
 
         <form>
-            <label for="name">Full Name:</label>
-            <input type="text" id="name" name="name"
-                   required>
+            <label for="name" id="nameLabel">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+            <p id="nameError" class="warning"></p>
 
             <br><br>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email"
-                   required>
+            <label for="email" id="emailLabel">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <p id="emailError" class="warning"></p>
 
             <br><br>
 
-            <label for="password">Password:</label>
-            <input type="password" id="password"
-                   name="password" minlength="6" required>
+            <label for="password" id="passwordLabel">Password:</label>
+            <input type="password" id="password" name="password"
+                   minlength="6" required>
+            <p id="passwordError" class="warning"></p>
 
             <br><br>
 
-            <input type="button" value="Sign Up">
+            <label for="confirmPassword" id="confirmLabel">Confirm Password:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword"
+                   minlength="6" required>
+            <p id="confirmError" class="warning"></p>
+
+            <br><br>
+
+            <input type="button" id="signupButton" value="Sign Up"
+                   onclick="validateSignup()">
         </form>
 
-        <p>Already have an account?
-            <a href="login.html">Login</a>
+        <p>
+            <span id="haveAccountText">Already have an account?</span>
+            <a href="login.html" id="signupLoginLink">Login</a>
         </p>
     </section>
 </main>
@@ -53,6 +72,9 @@
 <footer>
     <p>Smart Data Cleaner</p>
 </footer>
+
+<script src="language.js"></script>
+<script src="validator.js"></script>
 
 </body>
 </html>
