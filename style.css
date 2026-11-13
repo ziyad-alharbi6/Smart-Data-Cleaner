@@ -305,3 +305,10 @@ html[lang="ar"] .about ul {
     font-size: 14px;
 }
 
+#aboutExtra {
+    margin-top: 15px;
+}
+
+#aboutToggleButton {
+    margin-top: 20px;
+}

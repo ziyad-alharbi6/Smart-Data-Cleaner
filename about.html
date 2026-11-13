@@ -1,8 +1,8 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - Smart Data Cleaner</title>
     <link rel="stylesheet" href="style.css">
     <style>
@@ -16,45 +16,68 @@
 <body>
 
     <header>
-        <h1>Smart Data Cleaner</h1>
-        <p>Clean your data easily.</p>
+        <div class="top-bar">
+            <select id="languageSelect" class="language-select" onchange="changeLanguageFromSelect()">
+                <option value="en">English</option>
+                <option value="ar">العربية</option>
+            </select>
+
+            <a href="login.html" id="loginLink">Login</a>
+        </div>
+
+        <h1 id="mainTitle">Smart Data Cleaner</h1>
+        <p id="subtitle">Clean your data easily.</p>
 
         <nav>
-            <a href="about-ar.html">العربية</a>
-            <a href="index.html">Home</a>
-            <a href="login.html">Login</a>
+            <a href="index.html" id="homeLink">Home</a>
         </nav>
     </header>
 
     <section class="about" id="about">
-        <h2>About Us</h2>
+        <h2 id="aboutPageTitle">About Us</h2>
 
-        <p>
-    Smart Data Cleaner is a student project
-    designed to help users identify common
-    problems in Excel files.
+        <p id="aboutPara1">
+            Smart Data Cleaner is a student project
+            designed to help users identify common
+            problems in Excel files.
         </p>
 
-
-        <p>
+        <p id="aboutPara2">
             The website focuses on missing values,
             duplicate rows, formatting issues,
             and extra spaces.
         </p>
 
-        <p>
+        <p id="aboutPara3">
             Our goal is to make data cleaning
             easier and more understandable.
         </p>
-        <h3 class="highlight">Features</h3>
 
-<ul>
-    <li>Detect missing values</li>
-    <li>Find duplicate rows</li>
-    <li>Identify formatting issues</li>
-    <li>Detect extra spaces</li>
-</ul>
+        <h3 class="highlight" id="featuresTitle">Features</h3>
+
+        <ul>
+            <li id="feature1">Detect missing values</li>
+            <li id="feature2">Find duplicate rows</li>
+            <li id="feature3">Identify formatting issues</li>
+            <li id="feature4">Detect extra spaces</li>
+        </ul>
+
+        <p id="aboutExtra" data-showing="no" style="display: none;">
+            This project was built for the CPIS 358 course using HTML, CSS and JavaScript.
+            The cleaning logic runs entirely in the browser, so the uploaded file never
+            leaves the user's computer.
+        </p>
+
+        <input type="button" id="aboutToggleButton" value="Show More"
+               onclick="toggleAboutText()">
     </section>
+
+    <footer>
+        <p>© 2026 Smart Data Cleaner</p>
+    </footer>
+
+    <script src="about.js"></script>
+    <script src="language.js"></script>
 
 </body>
 </html>
