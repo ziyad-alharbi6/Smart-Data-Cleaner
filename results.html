@@ -11,13 +11,20 @@
 <body>
 
 <header>
+    <div class="top-bar">
+        <select id="languageSelect" class="language-select" onchange="changeLanguageFromSelect()">
+            <option value="en">English</option>
+            <option value="ar">العربية</option>
+        </select>
+
+        <a href="login.html" id="loginLink">Login</a>
+    </div>
+
     <h1 id="mainTitle">Smart Data Cleaner</h1>
     <p id="subtitle">Clean your data easily.</p>
 
     <nav>
         <a href="index.html" id="homeLink">Home</a>
-        <a href="#" id="languageButton"
-           onclick="changeLanguage(); return false;">العربية</a>
     </nav>
 </header>
 

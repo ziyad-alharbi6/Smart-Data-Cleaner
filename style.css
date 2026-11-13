@@ -57,7 +57,8 @@ nav a:hover {
 }
 
 .login-box input[type="email"],
-.login-box input[type="password"] {
+.login-box input[type="password"],
+.login-box input[type="text"] {
     width: 100%;
     padding: 10px;
     margin-top: 5px;
@@ -267,4 +268,40 @@ html[lang="ar"] .about ul {
     font-weight: bold;
 }
 
+
+
+.warning {
+    color: red;
+    font-size: 13px;
+    margin: 5px 0 0 0;
+    display: none;
+}
+
+.login-box input[type="email"]:focus,
+.login-box input[type="password"]:focus,
+.login-box input[type="text"]:focus {
+    outline: none;
+    border-color: #1abc9c;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.language-select {
+    background-color: #2c3e50;
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 6px 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.account-area {
+    font-size: 14px;
+}
 
