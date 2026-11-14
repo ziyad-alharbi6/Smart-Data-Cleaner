@@ -47,3 +47,22 @@ function toggleAboutText() {
 }
 
 window.addEventListener("DOMContentLoaded", updateAboutToggle);
+
+
+
+function changeImage() {
+    var image = document.getElementById("dynamicImage");
+    var button = document.getElementById("changeImageButton");
+    var isArabic = document.documentElement.lang === "ar";
+
+    if (image.getAttribute("src") === "cleaner.jpg") {
+        image.src = "data-preview.svg";
+        button.textContent = isArabic ? "الصورة الأصلية" : "Original Image";
+    } else {
+        image.src = "cleaner.jpg";
+        button.textContent = isArabic ? "تغيير الصورة" : "Change Image";
+    }
+}
+
+
+

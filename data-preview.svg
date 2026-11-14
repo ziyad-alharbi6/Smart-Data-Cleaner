@@ -1,0 +1,25 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="260" viewBox="0 0 400 260">
+  <rect width="400" height="260" rx="15" fill="#edf5ff"/>
+  <rect x="45" y="35" width="310" height="190" rx="10" fill="white" stroke="#b7cde7" stroke-width="2"/>
+  <rect x="45" y="35" width="310" height="40" rx="10" fill="#245b92"/>
+  <text x="200" y="61" text-anchor="middle" fill="white" font-family="Arial" font-size="18">Data Preview</text>
+  <g stroke="#c8d8e9" stroke-width="1.5">
+    <line x1="45" y1="115" x2="355" y2="115"/>
+    <line x1="45" y1="155" x2="355" y2="155"/>
+    <line x1="45" y1="195" x2="355" y2="195"/>
+    <line x1="145" y1="75" x2="145" y2="225"/>
+    <line x1="250" y1="75" x2="250" y2="225"/>
+  </g>
+  <g fill="#344a63" font-family="Arial" font-size="14" text-anchor="middle">
+    <text x="95" y="100">Name</text>
+    <text x="197" y="100">Age</text>
+    <text x="302" y="100">Status</text>
+    <text x="95" y="140">Ahmed</text>
+    <text x="197" y="140">20</text>
+    <text x="302" y="140">Valid</text>
+    <text x="95" y="180">Sara</text>
+    <text x="197" y="180">—</text>
+    <text x="302" y="180" fill="#ca493c">Missing</text>
+  </g>
+</svg>

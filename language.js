@@ -116,6 +116,28 @@ function setLanguage(lang) {
         updateAboutToggle();
     }
 
+    // Translate the dynamic image title
+    setText(
+        "imageTitle",
+        "Data Cleaning Preview",
+        "معاينة تنظيف البيانات",
+        isArabic
+    );
+
+    var dynamicImage = document.getElementById("dynamicImage");
+    var changeImageButton = document.getElementById("changeImageButton");
+
+    if (dynamicImage && changeImageButton) {
+        if (dynamicImage.getAttribute("src") === "data-preview.svg") {
+            changeImageButton.textContent =
+                isArabic ? "الصورة الأصلية" : "Original Image";
+        } else {
+            changeImageButton.textContent =
+                isArabic ? "تغيير الصورة" : "Change Image";
+        }
+    }
+
+
 var fileNameElement = document.getElementById("fileName");
 
 if (fileNameElement) {
@@ -173,9 +195,6 @@ if (fileNameElement) {
         }
     }
     
-    var statusMessage = document.getElementById("statusMessage");
-    
-    // Translate cleaning message when language changes
     var statusMessage = document.getElementById("statusMessage");
 
     if (statusMessage && statusMessage.dataset.cleaned === "yes") {
